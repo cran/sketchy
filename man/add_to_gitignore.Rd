@@ -25,7 +25,7 @@ Prints the name of the files matching the searching parameters. If \code{add.to.
 The function can be used to avoid conflicts when working with large files or just avoid adding non-binary files to remote repositories. It mostly aims to simplify spotting/excluding large files. Note that file names can be manually added to the '.gitignore' file using a text editor.
 }
 \examples{
-\donttest{
+{
 data(compendiums)
 
 make_compendium(name = "my_compendium", path = tempdir(),

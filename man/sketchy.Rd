@@ -2,8 +2,9 @@
 % Please edit documentation in R/sketchy-package.R
 \docType{package}
 \name{sketchy}
+\alias{sketchy-package}
 \alias{sketchy}
-\title{sketchy: quantifying habitat-induced acoustic signal degradation}
+\title{sketchy: create custom research compendiums}
 \description{
 `sketchy` is intended to facilitate the use of research compendiums for data analysis in the R environment. Standard research compendiums provide a easily recognizable means for organizing digital materials, allowing  other researchers to inspect, reproduce, and build upon that research.
 }
@@ -13,8 +14,14 @@ The main features of the package are:
   \item Creation of (customized) folder structure
   \item Simplify the inclusion of big data files with version control software and online collaborative platforms (e.g. github)
   }
+}
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/maRce10/sketchy}
+  \item Report bugs at \url{https://github.com/maRce10/sketchy/issues}
+}
 
-License: GPL (>= 2)
 }
 \author{
 Marcelo Araya-Salas, Beatriz Willink & Andrea Arriaga

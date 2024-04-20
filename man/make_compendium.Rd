@@ -5,7 +5,7 @@
 \title{Generate folder structures for research compendiums}
 \usage{
 make_compendium(name = "research_compendium", path = ".", force = FALSE,
-format = "basic", comments = NULL, packrat = FALSE,
+format = "basic", packrat = FALSE,
 git = FALSE, clone = NULL, readme = TRUE, Rproj = FALSE)
 }
 \arguments{
@@ -15,22 +15,20 @@ git = FALSE, clone = NULL, readme = TRUE, Rproj = FALSE)
 
 \item{force}{Logical controlling whether existing folders with the same name are used for setting the folder structure. The function will never overwrite existing files or folders.}
 
-\item{format}{A character vector with 2 or more elements with the names of the folders and subfolders to be included. Alternatively, it can be a character vector of length 1 with the name of the built-in compendiums available in the example object `compendiums` (see \code{\link{compendiums}} for available formats). Default is 'basic'.}
-
-\item{comments}{A character string with the comments to be added to each folder in the graphical representation of the folder skeleton printed on the console.}
+\item{format}{A character vector of length 1 with the name of the built-in compendiums available in the example object `compendiums` (see \code{\link{compendiums}} for available formats). Default is 'basic'. Alternatively, it can be a character vector with 2 or more elements with the names of the folders and subfolders to be included.}
 
 \item{packrat}{Logical to control if packrat is initialized (\code{packrat::init()}) when creating the compendium. Default is \code{FALSE}.}
 
 \item{git}{Logical to control if a git repository is initialized (\code{git2r::init()}) when creating the compendium. Default is \code{FALSE}.}
 
-\item{clone}{Path to a directory containing a folder structure to be cloned. Default is  \code{NULL}. If provided 'format' is ignored. Folders starting with \code{^\\.git|^\.Rproj.user|^\\.\\.Rcheck} will be ignored.}
+\item{clone}{Path to a directory containing a folder structure to be cloned. Default is \code{NULL}. If provided 'format' is ignored. Folders starting with \code{^\\.git|^\.Rproj.user|^\\.\\.Rcheck} will be ignored.}
 
 \item{readme}{Logical. Controls if a readme file (in Rmd format) is added to the project. The file has predefined fields for documenting objectives and current status of the project. Default is \code{TRUE}.}
 
 \item{Rproj}{Logical. If \code{TRUE} a R project is created (i.e. a .Rproj file is saved in the main project directory).}
 }
 \value{
-A folder skeleton for a research compendium. In addition the structure of the compendium is printed in the console. If the compendium format includes a "manuscript" or "doc(s)" folder the function saves a manuscript template in Rmarkdown format ("manuscript_template.Rmd") and APA citation style file ("apa.csl") inside that folder.
+A folder skeleton for a research compendium. In addition the structure of the compendium is printed in the console. If the compendium format includes a "manuscript" or "doc(s)" folder the function saves a manuscript template in Rmarkdown format ("manuscript.Rmd"), a BibTex file ("example_library.bib", for showing how to add citations) and APA citation style file ("apa.csl") inside that folder.
 }
 \description{
 \code{make_compendium} generates the folder structure of a research compendium.
