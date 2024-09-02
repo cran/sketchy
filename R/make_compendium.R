@@ -27,7 +27,7 @@
 #'
 #' @author Marcelo Araya-Salas (\email{marcelo.araya@@ucr.ac.cr})
 #' @references {
-#' Araya-Salas, M., Willink, B., Arriaga, A. (2020), sketchy: research compendiums for data analysis in R. R package version 1.0.2.
+#' Araya-Salas, M., Arriaga, A. (2023), sketchy: research compendiums for data analysis in R. R package version 1.0.3.
 #'
 #' Marwick, B., Boettiger, C., & Mullen, L. (2018). Packaging Data Analytical Work Reproducibly Using R (and Friends). American Statistician, 72(1), 80-88.
 #'
@@ -90,7 +90,7 @@ make_compendium <-
       cat(crayon::green("Creating directories ...\n")) else
       cat(crayon::green("Setting project on an existing directory ...\n"))
 
-    if (file.exists(dir) && !force)
+    if (dir_existed <- file.exists(dir) && !force)
       .stop(gettextf("directory '%s' already exists", dir),
             domain = NA) else
     .safe_dir_create(dir)
@@ -329,7 +329,7 @@ make_compendium <-
         readme_file[2] <- paste('title:', name)
         writeLines(readme_file, file.path(dir, "README.Rmd"))
 
-        rmarkdown::render(file.path(dir, "README.Rmd"), quiet = TRUE)
+        rmarkdown::render(file.path(dir, "README.Rmd"), quiet = TRUE, output_format = "md_document")
       } else
         cat(crayon::green("README.Rmd already exists.\n"))
 

@@ -27,9 +27,8 @@
 #'
 #' @author Marcelo Araya-Salas (\email{marcelo.araya@@ucr.ac.cr})
 #' @references {
-#' Araya-Salas, M., Willink, B., Arriaga, A. (2020), sketchy: research compendiums for data analysis in R. R package version 1.0.2.
+#' Araya-Salas, M., Arriaga, A. (2023), sketchy: research compendiums for data analysis in R. R package version 1.0.3.
 #' }
-#last modification on dec-26-2019 (MAS)
 
 add_to_gitignore <- function(add.to.gitignore = FALSE, cutoff = NULL, extension = NULL, path = "."){
 
@@ -51,7 +50,8 @@ add_to_gitignore <- function(add.to.gitignore = FALSE, cutoff = NULL, extension 
     fi <- fi[order(-fi$size), ]
 
     # get size in MB
-    file_size <- sapply(fi$size, function(x) .format_object_size(x, "Mb"))
+    # file_size <- sapply(fi$size, function(x) .format_object_size(x, "MB"))
+    file_size <- fi$size / 1000000
 
     # put it in a data.frame
     file_size_df <- data.frame(file.path = rownames(fi), file_size_Mb = as.numeric(gsub(" Mb","", file_size)))
@@ -84,8 +84,13 @@ add_to_gitignore <- function(add.to.gitignore = FALSE, cutoff = NULL, extension 
 
     if (length(files_found) > 0){
       if (is.null(extension))
-        exit_ms <- paste0(crayon::magenta("\nThe following file(s) exceed(s) the cutoff size:"),"\n", paste(files_found, collapse = "\n"), "\n") else
+        exit_ms <- paste0(crayon::magenta("\nThe following file(s) exceed(s) the cutoff size:"),"\n", paste(files_found, collapse = "\n"), "\n")
+
+      if (is.null(cutoff))
           exit_ms <- paste0(crayon::magenta("\nThe following file(s) match(es) the extension:"),"\n", paste(files_found, collapse = "\n"), "\n")
+
+      if (!is.null(cutoff) & !is.null(extension))
+        exit_ms <- paste0(crayon::magenta("\nThe following file(s) match(es) the extension and exceed(s) the cutoff:"),"\n", paste(files_found, collapse = "\n"), "\n")
 
     } else exit_ms <- paste0(crayon::magenta("\nNo files were found"))
 
