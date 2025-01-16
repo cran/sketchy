@@ -1,7 +1,7 @@
 Package: sketchy
 Type: Package
 Title: Create Custom Research Compendiums
-Version: 1.0.4
+Version: 1.0.5
 Maintainer: Marcelo Araya-Salas <marcelo.araya@ucr.ac.cr>
 Description: Provides functions to create and manage research compendiums for data analysis. Research compendiums are a standard and intuitive folder structure for organizing the digital materials of a research project, which can significantly improve reproducibility. The package offers several compendium structure options that fit different research project as well as the ability of duplicating the folder structure of existing projects or implementing custom structures. It also simplifies the use of version control.
 License: GPL (>= 2)
@@ -17,8 +17,8 @@ RoxygenNote: 7.3.2
 Repository: CRAN
 Language: en-US
 Authors@R: c(person("Marcelo", "Araya-Salas", role = c("aut", "cre"), email = "marcelo.araya@ucr.ac.cr", comment = c(ORCID = "0000-0003-3594-619X")), person("Andrea Yure", "Arriaga Madrigal", role = c("aut"), email = "arriagamadrigal@gmail.com"))
-Packaged: 2024-09-02 17:17:05 UTC; marce
+Packaged: 2025-01-16 20:14:43 UTC; m
 Author: Marcelo Araya-Salas [aut, cre]
     (<https://orcid.org/0000-0003-3594-619X>),
   Andrea Yure Arriaga Madrigal [aut]
-Date/Publication: 2024-09-02 20:20:02 UTC
+Date/Publication: 2025-01-16 20:40:07 UTC

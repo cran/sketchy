@@ -1,7 +1,7 @@
-c6400cdcee23db7ac171c4b045059565 *DESCRIPTION
+b5c911e08c5e3c19308ce65ab81ba471 *DESCRIPTION
 054f0998ccaeccb28b5f6f95e0d18107 *NAMESPACE
-627541bb75992d0c94c6d25369a6333e *NEWS.md
-f3c6f82c57c1e12f4327d698154ff7db *R/add_to_gitignore.R
+099900222f4c7eff954ce9170d1c424c *NEWS.md
+c677c53c424701777fcd998a06537cad *R/add_to_gitignore.R
 fc367c87dc7a6f36f23f67f5b015ee4d *R/check_urls.R
 6da592c760a5482fef026c224127dc69 *R/compendiums-data.R
 95a8354f041679b59d7515dcaad2310d *R/globals.R
@@ -12,9 +12,9 @@ f1a433c94b201a31511edf4400578f0d *R/load_packages.R
 88d34fd7cb94f2ba62fbb9e8b05c6cf7 *R/print_skeleton.R
 64101be75a93a5639c2f29ca0ed358ba *R/sketchy-package.R
 0d468dc4e01f2567a8e15e5b6b012280 *R/spot_unused_files.R
-b10e2a9a2b2569a07b45c64e230795f1 *R/sysdata.rda
+ad76d9757d07bc8c5428cf2f531038fa *R/sysdata.rda
 3b961b4dfb29b0f3508bf806d950ff88 *README.md
-8b41b925ca055805462de7eaa4be896b *data/compendiums.rda
+87d57d7ebffc5aba97e8a44fcedc61b4 *data/compendiums.rda
 7f15b25a0026d11c03534c525f08c39c *inst/CITATION
 94273fff33f388d7888c35b09590906c *man/add_to_gitignore.Rd
 9a3bc98dfabc9de1de058ed6001f5e2b *man/check_urls.Rd
